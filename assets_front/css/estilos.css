@@ -94,7 +94,7 @@ a {
   z-index: 99;
   width: 100%;
   padding: 1.6rem 0;
-  background: transparent;
+  background: red;
 }
 .link-nav-logo{
   display: block;
