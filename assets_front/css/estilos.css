@@ -683,6 +683,7 @@ a {
     height: 18px;
   }
   .contianer-imagen-principal{
+    margin-top: 0;
     z-index: 2;
   }
   .magnetic{
@@ -699,12 +700,18 @@ a {
     left: 0;
     width: 40%;
     height: auto;
-    /* visibility: hidden; */
   }
   .planta-derecha{
     right: 0;
     width: 40%;
     height: auto;
-    /* visibility: hidden; */
   }
+  .menu-body {
+    width: 100vw;
+    padding: 3rem 2rem;
+  }
+  .list-menu-body li a {
+    font-size: 1.4rem;
+  }
+
 }
