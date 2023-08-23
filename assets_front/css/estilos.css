@@ -37,8 +37,6 @@ body{
   overflow: hidden;
   height: 100vh;
   height: 100dvh;
-  height: 100svh;
-  height: 100lvh;
 }
 body.modal-open{
   padding-right: 0 !important;
@@ -225,8 +223,6 @@ a {
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  height: 100svh;
-  height: 100lvh;
   background: url(../images/fondo.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -235,9 +231,13 @@ a {
   overflow: hidden;
 }
 .contianer-imagen-principal{
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,7 +735,7 @@ a {
 }
 @media screen and (max-width:425px){
   .nav{
-    width: 94%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
