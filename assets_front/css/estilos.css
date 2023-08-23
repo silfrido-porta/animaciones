@@ -244,7 +244,6 @@ a {
   height: 42vh;
   object-fit: contain;
   visibility: hidden;
-  transition: all .3s;
 }
 .title-section-principal{
   position: relative;
@@ -696,7 +695,6 @@ a {
     padding-right: 10px;
   }
   .img-principal{
-    transition: all .3s;
     height: 25vh;
   }
   .planta{
