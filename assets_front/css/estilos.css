@@ -18,6 +18,7 @@
 *{
   webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 :root{
   --colorBlanco: #ffffff;
@@ -240,6 +241,10 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 2rem;
   /* gap: 1rem; */
 }
