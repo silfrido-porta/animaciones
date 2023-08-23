@@ -40,6 +40,7 @@ body{
   font-size: 16px;
   height: 100vh;
   height: 100dvh;
+  overflow: hidden;
 }
 body.modal-open{
   padding-right: 0 !important;
@@ -239,10 +240,6 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin-top: 2rem;
   /* gap: 1rem; */
 }
