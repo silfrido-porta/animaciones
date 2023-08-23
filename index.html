@@ -60,29 +60,15 @@
                 <div class="menu-body">
                     <div class="container-menu-body">
                         <ul class="list-menu-body">
-                        @if (auth()->check())
-                            <li><a href="{{ route('front.perfil')}}">Ver Perfil</a></li>
-                        @endif
+                            <li><a href="#">Ver Perfil</a></li>
                             <li><a href="#">Información de la Promo</a></li>
-                            <li><a href="{{ route('front.bases')}}">Bases y Condiciones</a></li>
-                            <li><a href="{{ route('front.politica')}}">Política de Privacidad</a></li>
-                        @if (auth()->check())
-                            <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                    {{ __('Salir') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                        @endif
+                            <li><a href="#">Bases y Condiciones</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
                         </ul>
                         <ul class="list-menu-footer">
-                            <li><a href="#"><img src="{{ url('assets_front/images/facebook.svg')}}"
+                            <li><a href="#"><img src="assets_front/images/facebook.svg"
                                                  alt="Icono de Facebook"></a></li>
-                            <li><a href="#"><img src="{{ url('assets_front/images/instagram.svg')}}"
+                            <li><a href="#"><img src="assets_front/images/instagram.svg"
                                                  alt="Icono de Instagran"></a></li>
                         </ul>
                     </div>
@@ -186,8 +172,8 @@
       gsap.from('.img-principal', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.4, autoAlpha:0});
       gsap.from('.login', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.4, autoAlpha:0});
       gsap.from('.btn-principal', 1.2, {opacity:0, y:200, ease:Bounce.BounceInOut, delay:.2, autoAlpha:0});
-      // gsap.from('.planta-izquierda', 1.2, {opacity:0, y:200, x: -100, scale:0.5, delay:.1, autoAlpha:0});
-      // gsap.from('.planta-derecha', 1.2, {opacity:0, y:200, x: 110, scale:0.5, delay:.1, autoAlpha:0});
+      gsap.from('.planta-izquierda', 1.2, {opacity:0, y:200, x: -100, scale:0.5, delay:.1, autoAlpha:0});
+      gsap.from('.planta-derecha', 1.2, {opacity:0, y:200, x: 110, scale:0.5, delay:.1, autoAlpha:0});
     });
     return () => ctx.revert();  
   });

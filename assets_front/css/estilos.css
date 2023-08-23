@@ -272,19 +272,19 @@ a {
   object-fit: contain;
   position: absolute;
   bottom: 0;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .planta-izquierda{
   left: 0;
   width: auto;
   height: 80vh;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .planta-derecha{
   right: 0;
   width: auto;
   height: 80vh;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 @media screen and (min-width:990px){
   .dino{
