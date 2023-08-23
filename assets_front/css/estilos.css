@@ -33,11 +33,10 @@
   --fonts-text: 'Poppins-Regular';
 }
 *{
-  outline: 1px solid red;
+  overflow: hidden;
 }
 body{
   font-size: 16px;
-  overflow: hidden;
   height: 100vh;
   height: 100dvh;
 }
@@ -93,9 +92,10 @@ a {
 .header{
   position: fixed;
   left: 0;
+  right: 0;
   top:0;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
   padding: 1.6rem 0;
 }
 .link-nav-logo{
@@ -222,7 +222,7 @@ a {
 
 /* Seccion Principal */
 .seccion-principal{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   height: 100dvh;
   background: url(../images/fondo.jpg);
@@ -238,8 +238,6 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
