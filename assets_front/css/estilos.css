@@ -32,7 +32,8 @@
   --font-wide: 'BumpoSoft-Wide';
   --fonts-text: 'Poppins-Regular';
 }
-*{
+
+main{
   overflow: hidden;
 }
 body{
