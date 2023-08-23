@@ -156,7 +156,7 @@ a {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(1000%);
+  transform: translateX(10000px);
   transition: transform .5s;
 }
 .menu-body.open{
@@ -681,6 +681,9 @@ a {
     }
 }
 @media screen and (max-width:768px) {
+  .logo{
+    width: 150px;
+  }
   .btn-menu{
     height: 44px;
   }
@@ -721,5 +724,8 @@ a {
   }
   .btn-principal span {
     font-size: 1rem;
+  }
+  .menu-overlay.active{
+    display: none;
   }
 }
