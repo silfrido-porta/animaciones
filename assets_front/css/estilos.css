@@ -205,8 +205,10 @@ a {
   opacity: 0;
   visibility: visible;
   transition: opacity .3s;
+  display: none;
 }
 .menu-overlay.active{
+  display: block;
   opacity: 1;
   visibility: visible;
   z-index: 9;
@@ -693,7 +695,7 @@ a {
     padding-right: 10px;
   }
   .img-principal{
-    height: 200px;
+    height: 30vh;
   }
   .planta{
     z-index: 1;
@@ -715,5 +717,7 @@ a {
   .list-menu-body li a {
     font-size: 1.4rem;
   }
-
+  .btn-principal span {
+    font-size: 1rem;
+  }
 }
