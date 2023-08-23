@@ -244,6 +244,7 @@ a {
   height: 42vh;
   object-fit: contain;
   visibility: hidden;
+  transition: all .3s;
 }
 .title-section-principal{
   position: relative;
@@ -695,19 +696,20 @@ a {
     padding-right: 10px;
   }
   .img-principal{
-    height: 30vh;
+    transition: all .3s;
+    height: 25vh;
   }
   .planta{
     z-index: 1;
   }
   .planta-izquierda{
     left: 0;
-    width: 40%;
+    width: 46%;
     height: auto;
   }
   .planta-derecha{
     right: 0;
-    width: 40%;
+    width: 46%;
     height: auto;
   }
   .menu-body {
