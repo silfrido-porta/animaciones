@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es-PY" class="sr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets_front/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets_front/images/favicon//favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets_front/images/favicon//favicon-16x16.png">
+	<link rel="manifest" href="assets_front/images/favicon//site.webmanifest">
+	<link rel="mask-icon" href="assets_front/images/favicon//safari-pinned-tab.svg" color="#0053a0">
+	<meta name="msapplication-TileColor" content="#0053a0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Puro Sol</title>
+
+	<meta name="title" content="Puro Sol">
+	<meta name="description" content="Puro Sol">
+	<meta name="author" content="Porta Agencia Web">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Puro Sol">
+	<meta property="og:description" content="Puro Sol">
+	<meta property="og:image" content="assets_front/images/social_seo.jpg">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:title" content="Puro Sol">
+	<meta property="twitter:description" content="Puro Sol">
+	<meta property="twitter:image" content="assets_front/images/social_seo.jpg">
+
+
+	<link rel="stylesheet" href="assets_front/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets_front/css/estilos.css?v=0.1">
+	<link rel="stylesheet" href="assets_front/css/memoria.css?v=0.1">
+
+</head>
+
+<body class="body">
+
+<main>
+  <header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="item-nav">
+            </div>
+            <div class="item-nav">
+                <a href="#" class="link-nav-logo">
+                    <img src="assets_front/images/logo.svg" alt="Logo de Puro Sol" class="logo" loading="lazy"></a>
+            </div>
+
+            <div class="item-nav item-nav-desktop">
+                <button class="btn-menu">
+                    <img src="assets_front/images/menu.svg" alt="Icono de Menú" class="icon-menu">
+                    <img src="assets_front/images/cerrar.svg" alt="Icono de Cerrar" class="icon-close">
+                </button>
+
+                <div class="menu-body">
+                    <div class="container-menu-body">
+                        <ul class="list-menu-body">
+                        @if (auth()->check())
+                            <li><a href="{{ route('front.perfil')}}">Ver Perfil</a></li>
+                        @endif
+                            <li><a href="#">Información de la Promo</a></li>
+                            <li><a href="{{ route('front.bases')}}">Bases y Condiciones</a></li>
+                            <li><a href="{{ route('front.politica')}}">Política de Privacidad</a></li>
+                        @if (auth()->check())
+                            <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    {{ __('Salir') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        @endif
+                        </ul>
+                        <ul class="list-menu-footer">
+                            <li><a href="#"><img src="{{ url('assets_front/images/facebook.svg')}}"
+                                                 alt="Icono de Facebook"></a></li>
+                            <li><a href="#"><img src="{{ url('assets_front/images/instagram.svg')}}"
+                                                 alt="Icono de Instagran"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="menu-overlay"></div>
+
+	<section class="seccion-principal">
+		<div class="container">
+			<div class="contianer-imagen-principal">
+				<!-- <h1 class="title-section-principal">
+					<span>DINO</span>
+					<span>AVENTURA</span>
+				</h1> -->
+				<h1 class="title-section-principal">
+					Códigos Segretos <br> Dino Aventura
+				</h1>
+				<img src="assets_front/images/texto-central-sin.svg" alt="Códigos secretos Dino Aventura" class="img-principal">
+
+				<div class="magnetic" data-strength="20" data-strength-text="10">
+					<a href="#" class="btn-principal">
+					  <span>Canjear Cupones</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<img src="assets_front/images/dino-principal-2.png" alt="Imagen de Dino" class="dino">
+		<img src="assets_front/images/planta-iz-nuevo.png" alt="Imagen de planta" class="planta planta-izquierda">
+		<img src="assets_front/images/planta-der-nuevo.png" alt="Imagen de planta" class="planta planta-derecha">
+	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<h5 class="modal-title" id="registroLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					...
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <footer class="footer d-none" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-2">
+            <img class="logo-footer" src="{{ asset('assets_front/images/logo.svg')}}" alt="Logo de Homenaje" />
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h2 class="title-footer">Enlaces Útiles</h2>
+    
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="widget">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="widget">
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </footer>
+    
+
+</main>
+
+
+<script src="assets_front/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets_front/js/jquery.min.js"></script>
+
+<script src="assets_front/js/scrollreveal.min.js"></script>
+
+<script src="assets_front/js/gsap.min.js"></script>
+
+<script src="assets_front/js/confeti.min.js"></script>
+
+<script src="assets_front/js/winwheel.min.js"></script>
+
+<script src="assets_front/js/simplyCountdown.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+
+<script>
+  window.addEventListener("load", (event) => {
+    let ctx = gsap.context(() => {
+      gsap.from('.logo', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.1, autoAlpha:0});
+      gsap.from('.dino', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.1, autoAlpha:0});
+      gsap.from('.img-principal', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.4, autoAlpha:0});
+      gsap.from('.login', 1.2, {opacity:0, y:-200, ease:Bounce.BounceInOut, delay:.4, autoAlpha:0});
+      gsap.from('.btn-principal', 1.2, {opacity:0, y:200, ease:Bounce.BounceInOut, delay:.2, autoAlpha:0});
+      // gsap.from('.planta-izquierda', 1.2, {opacity:0, y:200, x: -100, scale:0.5, delay:.1, autoAlpha:0});
+      // gsap.from('.planta-derecha', 1.2, {opacity:0, y:200, x: 110, scale:0.5, delay:.1, autoAlpha:0});
+    });
+    return () => ctx.revert();  
+  });
+    
+  window.addEventListener("DOMContentLoaded", (event) => {
+
+    initMagneticButtons();
+
+    /**
+    * Magnetic Buttons
+    */
+    function initMagneticButtons() {
+      
+      // Magnetic Buttons
+      // Found via: https://codepen.io/tdesero/pen/RmoxQg
+      var magnets = document.querySelectorAll('.magnetic');
+      var strength = 50;
+      
+      // START : If screen is bigger as 540 px do magnetic
+      if(window.innerWidth > 540){
+        // Mouse Reset
+        magnets.forEach( (magnet) => {
+          magnet.addEventListener('mousemove', moveMagnet );
+          magnet.addEventListener('mouseleave', function(event) {
+              gsap.to( event.currentTarget, 1.5, {
+                x: 0, 
+                y: 0, 
+                ease: Elastic.easeOut
+                // ease: Power4.easeOut
+              });
+          });
+        });
+      
+        // Mouse move
+        function moveMagnet(event) {
+          var magnetButton = event.currentTarget;
+          var bounding = magnetButton.getBoundingClientRect();
+          var magnetsStrength = magnetButton.getAttribute("data-strength");
+            
+          gsap.to( magnetButton, 1.5, {
+              x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * magnetsStrength,
+              y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * magnetsStrength,
+              rotate: "0.001deg",
+              ease: Power4.easeOut
+          });
+        }
+    
+      }; // END : If screen is bigger as 540 px do magnetic
+    
+    
+    }
+  
+    
+
+    //////Abrir subcategorias del menÃº mobile//////
+    // document.querySelectorAll('.button-tabs').forEach((item) => {
+    //   item.addEventListener('click', (event) => {
+    //     item.classList.toggle('open-tabs');
+    //     item.nextElementSibling.classList.toggle('open-tabs');
+    //   });
+    // });
+
+    let menuBtn = document.querySelector('.btn-menu');
+    let bodyMenu = document.querySelector('.menu-body');
+    const overlay = document.querySelector('.menu-overlay');
+    menuBtn.addEventListener('click', function() {
+      bodyMenu.classList.toggle('open');
+      menuBtn.classList.toggle('change');
+      overlay.classList.toggle('active');
+    });
+    overlay.addEventListener('click', function() {
+      bodyMenu.classList.remove('open');
+      menuBtn.classList.remove('change');
+      overlay.classList.remove('active');
+    });
+
+    // let itemMobile = document.querySelectorAll('.list-nav-subemenu').forEach((item) => {
+    //   item.addEventListener('click', (event) => {
+    //     item.classList.toggle('open');
+    //     item.nextElementSibling.classList.toggle('open');
+    //   });
+    // });
+
+    // let itemSubMobile = document.querySelectorAll('.link-nav-mobile').forEach((item) => {
+    //   item.addEventListener('click', (event) => {
+    //     item.classList.toggle('open');
+    //     item.nextElementSibling.classList.toggle('open');
+    //   });
+    // });
+
+  });
+</script>
+
+
+
+</body>
+</html>
